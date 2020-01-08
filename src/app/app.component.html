@@ -1,0 +1,54 @@
+<!-- <div *ngFor="let item of listComments">
+{{item | json}}
+</div> -->
+<table border="1" style="margin-bottom: 1rem;">
+  <thead>
+          <th>Id</th>
+          <th>Post Id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Body</th>
+  </thead>
+  <tbody>
+      <tr *ngFor = "let item of listComments">
+          <td>{{item.id}}</td>
+          <td>{{item.postId}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.body}}</td>
+        </tr>
+  </tbody>
+</table>
+<table border="1">
+    <thead>
+            <th>User Id</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Body</th>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let item of listCommentsPost">
+            <td>{{item.userId}}</td>
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.body}}</td>
+          </tr>
+    </tbody>
+  </table>
+  <h1>https://jsonplaceholder.typicode.com/posts</h1>
+  <table border="1">
+      <thead>
+              <th>User Id</th>
+              <th>Id</th>
+              <th>Title</th>
+              <th>Body</th>
+      </thead>
+      <tbody>
+          <tr >
+              <td>{{listCommentsPostMethod.userId}}</td>
+              <td>{{listCommentsPostMethod.id}}</td>
+              <td>{{listCommentsPostMethod.title}}</td>
+              <td>{{listCommentsPostMethod.body}}</td>
+            </tr>
+      </tbody>
+    </table>
